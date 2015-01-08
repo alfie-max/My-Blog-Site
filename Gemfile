@@ -10,6 +10,14 @@ gem 'turbolinks'
 gem 'jbuilder',             '~> 2.0'
 gem 'sdoc',                 '~> 0.4.0', group: :doc
 gem 'annotate',             '2.6.5'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google'
+gem 'omniauth-github'
+gem 'omniauth-amazon'
+gem 'figaro'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -28,6 +36,7 @@ group :development, :test do
   gem 'web-console',        '~> 2.0'
   gem 'spring'
   gem 'sqlite3'
+  gem 'foreman'
 end
 
 group :test do
