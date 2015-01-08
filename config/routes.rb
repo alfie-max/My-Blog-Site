@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'blog_home#home'
+
+  get 'help' => 'blog_home#help'
+
+  get 'contact' => 'blog_home#contact'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
