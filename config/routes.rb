@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'help' => 'blog_home#help'
 
+  get 'about' => 'blog_home#about'
+
   get 'contact' => 'blog_home#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
