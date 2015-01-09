@@ -4,6 +4,7 @@
   <h2>
     This is a public blog site for all.
   </h2>
-
-  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% if not user_signed_in? %>
+      <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
