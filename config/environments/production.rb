@@ -93,7 +93,8 @@ Rails.application.configure do
     password:                 ENV["GMAIL_PASSWORD"]
 }
 
-
-  config.action_mailer.default_url_options = { :host => 'my-blog-site.herokuapp.com' }
-  Rails.application.routes.default_url_options[:host] = 'my-blog-site.herokuapp.com'
+  host_site = 'my-blog-site.herokuapp.com'
+  # host_site = 'localhost:3000'
+  config.action_mailer.default_url_options = { :host => host_site }
+  Rails.application.routes.default_url_options[:host] = host_site
 end
