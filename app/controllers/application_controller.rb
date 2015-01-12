@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
 
   # For enabling user signin before site access
   # before_action :authenticate_user!
+  # before_filter :authenticate_user!
 end
