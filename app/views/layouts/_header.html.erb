@@ -7,7 +7,7 @@
           <li class="r-user-profile-img">
             <a href="">
               <% if current_user.avatar.present? %>
-                <%= image_tag current_user.avatar.url(:thumb) %>
+                <%= image_tag current_user.avatar.url %>
               <% end %>
             </a>
           </li>

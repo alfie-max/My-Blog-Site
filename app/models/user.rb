@@ -18,16 +18,18 @@
 #
 
 class User < ActiveRecord::Base
+   mount_uploader :avatar, AvatarUploader
+
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "40x40>" },
-                    :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :avatar,
-           :content_type => ["image/jpeg", "image/gif", "image/png", "image/jpg" ]
+  # has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "40x40>" },
+  #                   :default_url => "/images/:style/missing.png"
+  # validates_attachment_content_type :avatar,
+  #          :content_type => ["image/jpeg", "image/gif", "image/png", "image/jpg" ]
 
   # def user_params
   #   params.require(:user).permit(:avatar)
