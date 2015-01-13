@@ -17,6 +17,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-google'
 gem 'omniauth-github'
 gem 'omniauth-amazon'
+gem 'omniauth-stackexchange'
 gem 'figaro'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

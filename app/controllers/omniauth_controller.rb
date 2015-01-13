@@ -8,6 +8,24 @@ class OmniauthController < Devise::OmniauthCallbacksController
     redirect_to root_url, :notice => "Signed in!"
   end
 
+  def stackexchange
+    auth = request.env["omniauth.auth"]
+    # raise auth.to_yaml
+    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || create(auth)
+    session[:user_id] = user.id
+    sign_in user
+    redirect_to root_url, :notice => "Signed in!"
+  end
+
+  def github
+    auth = request.env["omniauth.auth"]
+    raise auth.to_yaml
+    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || create(auth)
+    session[:user_id] = user.id
+    sign_in user
+    redirect_to root_url, :notice => "Signed in!"
+  end
+
   private
 
   def create(auth)

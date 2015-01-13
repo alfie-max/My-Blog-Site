@@ -9,10 +9,8 @@
     <h2> This is a public blog site for all. </h2>
     <%= link_to "Log in Now!", new_user_session_path, class: "btn btn-lg btn-primary" %>
     <%= link_to "Log in with Twitter!", user_omniauth_authorize_path(:twitter), class: "btn btn-lg btn-primary" %>
-  <% end %>
-
-  <% if not user_signed_in? %>
-
+    <%= link_to "Log in with StackOverflow!", user_omniauth_authorize_path(:stackexchange), class: "btn btn-lg btn-primary" %>
+    <%= link_to "Log in with Github!", user_omniauth_authorize_path(:github), class: "btn btn-lg btn-primary" %>
   <% end %>
 
 </div>
