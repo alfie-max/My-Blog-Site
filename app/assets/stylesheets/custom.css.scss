@@ -55,7 +55,18 @@ p {
 }
 
 /* header */
-
+.r-navbar{
+  height:50px;
+}
+li.r-user-profile-img a img{
+  margin-top:-7px;
+  margin-right:-15px;
+  float:right;
+  max-width:32px!important;
+}
+li.r-user-active >  a{
+  color:#fff!important;
+}
 #logo {
   float: left;
   margin-right: 10px;

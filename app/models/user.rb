@@ -24,11 +24,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
 
-  def self.create_with_omniauth(auth)
-    create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.name = auth["info"]["name"]
-    end
-  end
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "40x40>" },
+                    :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar,
+           :content_type => ["image/jpeg", "image/gif", "image/png", "image/jpg" ]
+
+  # def user_params
+  #   params.require(:user).permit(:avatar)
+  # end
 end

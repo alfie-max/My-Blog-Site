@@ -19,6 +19,8 @@ gem 'omniauth-github'
 gem 'omniauth-amazon'
 gem 'omniauth-stackexchange'
 gem 'figaro'
+gem 'carrierwave'
+gem "paperclip", "~> 4.2"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
