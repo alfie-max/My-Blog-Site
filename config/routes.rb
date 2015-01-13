@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   root 'blog_home#home'
   get '/about'   => 'blog_home#about'
+  # get '/soemthig', to: 'controllers#actions', as: 'soemthig'
   get '/contact' => 'blog_home#contact'
 
-  get "/auth/:provider/callback" => "sessions#create"
+  # get '/auth/:provider/callback' => 'sessions#create'
+
+  resources :blogpost
 end

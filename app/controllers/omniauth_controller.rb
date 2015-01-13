@@ -19,7 +19,7 @@ class OmniauthController < Devise::OmniauthCallbacksController
 
   def github
     auth = request.env["omniauth.auth"]
-    raise auth.to_yaml
+    # raise auth.to_yaml
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || create(auth)
     session[:user_id] = user.id
     sign_in user

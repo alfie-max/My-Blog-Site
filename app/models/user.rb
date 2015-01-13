@@ -18,7 +18,9 @@
 #
 
 class User < ActiveRecord::Base
-   mount_uploader :avatar, AvatarUploader
+  has_many :blogpost, dependent: :destroy
+
+  mount_uploader :avatar, AvatarUploader
 
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable
